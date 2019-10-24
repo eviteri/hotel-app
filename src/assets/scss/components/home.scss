@@ -21,7 +21,8 @@ html {
 body{
     box-sizing: border-box; //border and padding are not adding on top of the element
     padding: 2rem;
-    background-image: url('../img/backgrounds/dark-background.jpg');
+    //background-image: url('../img/backgrounds/dark-background.jpg');
+    background-image: url('../images/backgrounds/dark-background.jpg');
 }
 main{
     background: $color-white;

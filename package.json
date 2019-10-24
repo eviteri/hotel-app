@@ -1,14 +1,39 @@
 {
   "name": "hotel-app",
   "version": "1.0.0",
-  "description": "CSS udemy course",
+  "description": "Hotel Demo App",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "start": "gulp",
+    "build": "gulp build --prod",
+    "bundle": "gulp bundle --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eviteri/hotel-app"
   },
   "author": "Eloy Viteri",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^14.0.0"
   }
 }

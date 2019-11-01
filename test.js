@@ -1,45 +1,3 @@
-//import './components/home';
-//import './components/carousel';
-
-/***************************
- *            HOME         *
- ***************************/
-var timeoutInMiliseconds = 6000;
-var timeoutId; 
-   
-// do some other initialization
-setupTimers();
-
-function setupTimers () {
-    document.addEventListener("mousemove", resetTimer, false);
-    document.addEventListener("mousedown", resetTimer, false);
-    document.addEventListener("keypress", resetTimer, false);
-    document.addEventListener("touchmove", resetTimer, false);
-     
-    startTimer();
-}
-
-function startTimer() { 
-    // window.setTimeout returns an Id that can be used to start and stop a timer
-    timeoutId = window.setTimeout(doInactive, timeoutInMiliseconds)
-}
-
-function resetTimer() { 
-    window.clearTimeout(timeoutId)
-    startTimer();
-}
-
-function doInactive() {
-    // does whatever you need it to actually do - probably signs them out or stops polling the server for info
-    console.log('user is inactive');
-    showCarousel();   
-    triggerCarouselAutoPlay();
-    
-}
-
- /***************************
- *          CAROUSEL        *
- ***************************/
 
 var carousel_direction = null;
 var carousel_auto_play = null;
@@ -48,7 +6,7 @@ const carousel_next_button = document.querySelector('.carousel-next-arrow');
 const carousel_prev_button = document.querySelector('.carousel-previous-arrow');
 const carousel_container = document.querySelector('.carousel-container');
 
-carousel_container.addEventListener('click', hideCarousel);
+//carousel_container.addEventListener('click', hideCarousel);
 carousel_prev_button.addEventListener('click', goToCarouselPrevSlide);
 carousel_next_button.addEventListener('click', goToCarouselNextSlide);
 carousel.addEventListener('transitionend', carouselTransitionEnded);
@@ -56,14 +14,11 @@ carousel.addEventListener('mouseover', stopCarouselAutoPlay);
 
 
 function showCarousel(){
-    carousel_container.classList.add('show-carousel');
+    document.querySelector('.carousel-container').classList.add('show-carousel');
 }
 
-function hideCarousel(event){
-    var element_id = event.target.id;
-    if(element_id == 'carousel'){
-        carousel_container.classList.remove('show-carousel');
-    }
+function hideCarousel(){
+    document.querySelector('.carousel-container').classList.remove('show-carousel');
 }
     
 function goToCarouselNextSlide(){
